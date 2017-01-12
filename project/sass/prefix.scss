@@ -1,0 +1,6 @@
+@mixin transform-rotate ($deg) {
+            transform: rotate($deg);
+            -moz-transform: rotate($deg);
+            -ms-transform: rotate($deg);
+            -webkit-transform: rotate($deg);
+        }

@@ -1,12 +1,12 @@
 $mainColor: #531515; 
 $subColor: #5f4b4b;
+@import 'prefix';
 
 html {
     display: block;
 }
 body {
     margin: 0 auto;
-    font-size: 100%;
 }
 header{
     h1 {
@@ -29,14 +29,64 @@ section {
     bottom: 0;
     right: 0;
     left: 0;
+    width: 100%;
+    max-width: 75em;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
     @media screen and (min-width: 800px){
         width: 90%;
     }
+   /* &:before {
+        content: '';
+        padding-top: 56.25%;
+        display: block;
+        }*/
+    .corners {
+        content: '';
+        width: 8%;
+        height: 10%;
+        position: absolute;
+        &:after, {
+            top: -5%;
+            background: #fff;
+        }
+        &:before{
+            top: -5%;
+            background: black;
+            left: -4%;
+           @include transform-rotate(-45deg);
+        }
+        span {
+            @extend .corners;
+        }
+        
+    }
 
 }
-
-    video {
+*, :after, :before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+video {
         margin: 0 auto;
         width: 100% !important;
         height: auto !important;
+        display: inline-block;
+        object-fit: contain;
     }    
+.section {
+    text-align: center;
+    display: block;
+}
+.section.featured {
+    color: #fff;
+    background: #6fcde3;
+    position: relative;
+    overflow: hidden;
+}
+.section .foodMenu {
+    padding: 11% 0 18%;
+    margin: -10% 0;
+}

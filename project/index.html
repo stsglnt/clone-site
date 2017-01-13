@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="serviceApp">
 <head>
 <meta charset="utf-8" />
 <title></title>
    
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    
 
 
   
 </head>
 
 
-<body>
+<body ng-controller="serviceCtrl">
 <div class="overlay">
     <header role="banner">
        <h1 id="logo">рандеву </h1>
@@ -57,14 +58,14 @@
                   </h2>
               </header>
               <div class="floor1">
-                 <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate officiis non, eveniet doloribus in? Beatae voluptatum iure natus totam nostrum vero eos hic deserunt repellat, eligendi facere magni recusandae, nemo quos odit molestiae sequi amet sed et ipsum unde? Id voluptates amet ea nobis fugiat eos, nemo ullam quos.</p>
+                 <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate officiis non, eveniet doloribus in? Beatae voluptatum iure na.</p>
                  <div class="buttonsEvents">
                      <a href="#" class="button">Floor1</a>
                  </div>
               </div>
               <div class="floor2">
               
-                <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos recusandae voluptatum dolore mollitia enim, dolor odio vitae doloremque a optio! Dolorum nobis ullam, earum accusantium quae error, neque perferendis eveniet suscipit iste quas beatae harum asperiores tempora doloremque, reiciendis eaque.</p>
+                <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos recusandae voluptatum dolore mollitia enim, dolor odio vitae dolore.</p>
                   <div class="buttonsEvents">
                      <a href="#" class="button">Floor1</a>
                  </div>
@@ -73,18 +74,42 @@
            
        </section>
        <section class="tabView section">
+          <div class="content">
+            <div class="buttons tab-list">
+              <a href="" class="button" ng-click="changeToBar()">Bar service</a>
+              <a href="" class="button" ng-click="changeToRolls()">Rolls</a>
+            </div>
+            
+            <div class="currentContent">
+                <ng-include src="url"></ng-include>
+               
+            </div>
+          </div>
            
        </section>
-       <section class="specialEvents section">
-           
-       </section>
+      
        <section class="contact section">
-           
+          <div class="content">
+                <header>
+                   <h2>Say hello.   </h2>
+                       <span>we'd love to hear from you</span>
+                 
+               </header>
+               
+            <form action="" class="form-horizontal" role="form">
+                <div class="form-group row">
+                   <div class="col-md-6"> <label for="inputName" class="control-label">Name</label>
+                        <input type="text" class="form-control" id="inputName"> </div>
+                   <div class="col-md-6">
+                         <label for="inputLast" class=" control-label">Last Name</label>
+                        <input type="text" class="form-control" id="inputLast">
+                    </div>
+                </div>
+            </form>
+           </div>
        </section>
     </div>
     <footer>
-        
-        
     </footer>
     
     
@@ -141,6 +166,6 @@
    
    
 
-
+ <script src="scripts/app.js"></script>
 </body>
 </html>

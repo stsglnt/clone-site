@@ -130,7 +130,7 @@ video {
     display: block;
      p {
         font-size: 1.5em;
-         line-height: 1.5;
+        line-height: 1.5;
     }
 }
 .section.featured {
@@ -211,14 +211,30 @@ video {
  
     .section p {
         font-size: 1.25em;
+.section.contact span {
+            font-size: .2em;
+        }
+    }
+    .section h2 {
+        font-size: 5em;
     }
 }
+@media (min-width: 640px) {
+    .section h2 {
+        font-size: 7em;
+.section.contact span {
+            font-size: .16071em;
+        }
+    }
 @media (min-width: 960px) {
     .section h2 {
         font-size: 9em;
     }
     .section p {
         font-size: 1.5em;
+         span {
+            font-size: .16671em;
+        }
     }
 }
 .foodMenu .content .buttons {
@@ -289,6 +305,7 @@ video {
         padding: 3%;
         margin: auto;
         overflow: hidden;
+        
       
        
     }
@@ -296,11 +313,12 @@ video {
 }
 @media (min-width: 480px){
     .section.events h2 {
-        font-size: 5em;
-        span {
-            font-size: .2em;
+        font-size: 5em;}
         }
-    }
+
+        span {
+            font-size: 1.2em;
+        }
     .section.events header h2 {
         height: 1.583333em;
     }
@@ -308,10 +326,11 @@ video {
 @media (min-width: 640px){
     .section.events h2 {
         font-size: 7em;
-        span {
-            font-size: .1607142em;
-        }
     }
+
+        span {
+            font-size: 1.1607142em;
+        }
     .section.events header h2 {
         height: 1.5625em;
     }
@@ -328,11 +347,17 @@ video {
     .section.events.content {
         position: relative;
     }
+    span {
+        font-size: 1.66666667em;
+    }
     .floor1, .floor2 {
         width: 50%;
         padding: 3%;
         margin: 0;
         float: left;
+        p {
+            margin-bottom: 1.5em;
+        }
         
     }
       .section.events h2 {
@@ -347,7 +372,7 @@ video {
         display: block;
         position: absolute;
         right: 25%;
-        bottom: 6.9em;
+        bottom: 3em;
         left: 25%;
     }
     .eventscontent:after {
@@ -360,7 +385,7 @@ video {
         display: block;
         position: absolute;
         right: 0;
-        bottom: .9em;
+        bottom: 0.2em;
         left: 0;
         z-index: 1;
     }
@@ -370,13 +395,17 @@ video {
 
 .eventscontent {
     position: relative;
+    padding: 0 0 8%;
+    margin: 0 0 -8%;
 }
 
 
 
 .buttonsEvents {
     text-align: center;
-    position: relative;
+    position: absolute;
+    width: 40%;
+    bottom: 2em;
     
     .button {
         background: #000;
@@ -391,19 +420,126 @@ video {
         }
     }
 }
-/*@media (min-width: 960px) {
-    .buttonsEvents.button{
-        width: 45%;
-        position: absolute;
-        bottom: 0;
+
+
+/*4th section*/
+
+.tabView .content {
+    width: 90%;
+    padding: 2em 1em;
+    margin: auto;
+    position: relative;
+    margin-bottom: 20em;
+
+}
+@media (min-width: 960px){
+    .buttons.tab-list{
+        direction: ltr;
+        width: 49%;
+        vertical-align: top;
+        padding-top: 25%;
+        display: inline-block;
     }
-}*/
- /*   &:before {
-            content: '';
-            border-top: 2px solid #000;
+}
+.buttons.tab-list {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    .button {
+        width: 60%;
+        margin: 0 auto 2em;
+        float: none;
+        display: block;
+        border: 2px solid darken(white, 30%);
+        &:hover {
+            text-decoration: none;
+        }
+        &:active {
+            color: #f5f5f5;
+            background: #6fcde3;
+            text-decoration: none;
+        }
+      
+    }
+}
+@media (min-width: 960px) {
+    .currentContent {
+        width: 49%;
+        text-align: left;
+        vertical-align: top;
+        display: inline-block;
+        float: right;
+        left: auto;
+        img {
+            width: 120%;
+            margin: -3.5em auto -25% -25%;
+        }
+    }
+}
+@media (min-width: 1280px) {
+    .currentContent h2 {
+        font-size: 7em;
+    }
+}
+@media (min-width: 960px) {
+    .currentContent h2 {
+        font-size: 6em;
+    }
+}
+@media (min-width: 480) {
+    .currentContent h2 {
+        font-size: 5em;
+    }
+}
+.currentContent h2{
+    color: #6fcde3;;
+    margin: 1em auto 0;
+}
+/*contant section*/
+
+
+
+
+@media (min-width: 800px){
+    .section.contact .content {
+        max-width: 60em;
+        
+    }
+}
+@media (min-width: 640px){
+    .section.contact header {
+        border-bottom-width: 2px;
+        padding-bottom: 2em;
+        margin-bottom: 3em;
+        h2 {
+            font-weight: 400;
+        }
+    }
+}
+
+.section.contact .content {
+        margin: auto;
+        padding: 2em 1em;
+        
+    }
+.section.contact {
+    background: darken(#f5f5f5, 15%);
+    
+    }
+    
+.section.contact  header {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2em;
+    margin-bottom: 3em;
+    
+  
+        span {
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: .5em;
+            text-transform: uppercase;
             display: block;
-            position: absolute;
-            right: 25%;
-            bottom: 2em;
-            left: 25%;
-        }*/
+        }
+    
+}
+

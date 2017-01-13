@@ -170,85 +170,97 @@ video {
 
 @media (min-width: 480px) {
   .section p {
-    font-size: 1.25em; } }
+    font-size: 1.25em; }
+    .section p .section.contact span {
+      font-size: .2em; }
+  .section h2 {
+    font-size: 5em; } }
 
-@media (min-width: 960px) {
+@media (min-width: 640px) {
+  .section h2 {
+    font-size: 7em; }
+    .section h2 .section.contact span {
+      font-size: .16071em; } }
+
+@media (min-width: 640px) and (min-width: 960px) {
   .section h2 {
     font-size: 9em; }
   .section p {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+    .section p span {
+      font-size: .16671em; } }
 
-.foodMenu .content .buttons {
-  text-align: center;
-  margin-top: 4em;
-  margin-bottom: 1em;
-  position: relative; }
-
-.foodMenu .content .line {
-  border-top: 2px solid #fff;
-  position: relative;
-  top: 40%;
-  z-index: 1; }
-
-.foodMenu .content .buttons:before {
-  content: '';
-  position: absolute;
-  border-top: 2px solid #fff;
-  top: 50%;
-  right: 0;
-  left: 0;
-  z-index: 1; }
-
-/*3rd section*/
-.section.events {
-  padding: 0 0 8%;
-  margin: 0 0 -8%;
-  background: #f5f5f5; }
-  .section.events header {
-    background: url("../img/events.jpg") center/cover no-repeat;
+@media (min-width: 640px) {
+  .foodMenu .content .buttons {
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 1em;
+    position: relative; }
+  .foodMenu .content .line {
+    border-top: 2px solid #fff;
     position: relative;
-    display: block; }
-    .section.events header:before {
-      content: '';
-      padding-top: 37.5%;
+    top: 40%;
+    z-index: 1; }
+  .foodMenu .content .buttons:before {
+    content: '';
+    position: absolute;
+    border-top: 2px solid #fff;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 1; }
+  /*3rd section*/
+  .section.events {
+    padding: 0 0 8%;
+    margin: 0 0 -8%;
+    background: #f5f5f5; }
+    .section.events header {
+      background: url("../img/events.jpg") center/cover no-repeat;
+      position: relative;
       display: block; }
-    .section.events header h2 {
-      height: 1.625em;
-      position: absolute;
-      color: #fff;
-      text-shadow: #000 0 0 120px;
-      margin: auto;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      font-family: BreathePro, adobe-garamond-pro, Georgia, 'Times New Roman', sans-serif; }
-      .section.events header h2 span {
-        font-weight: 300;
-        font-style: normal;
-        font-family: proxima-nova, Arial, Helvetica, sans-serif;
-        font-size: .214228em;
-        letter-spacing: .5em;
-        text-transform: uppercase;
+      .section.events header:before {
+        content: '';
+        padding-top: 37.5%;
         display: block; }
-  .section.events .content {
-    padding: 3%;
-    margin: auto;
-    overflow: hidden; }
+      .section.events header h2 {
+        height: 1.625em;
+        position: absolute;
+        color: #fff;
+        text-shadow: #000 0 0 120px;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-family: BreathePro, adobe-garamond-pro, Georgia, 'Times New Roman', sans-serif; }
+        .section.events header h2 span {
+          font-weight: 300;
+          font-style: normal;
+          font-family: proxima-nova, Arial, Helvetica, sans-serif;
+          font-size: .214228em;
+          letter-spacing: .5em;
+          text-transform: uppercase;
+          display: block; }
+    .section.events .content {
+      padding: 3%;
+      margin: auto;
+      overflow: hidden; } }
 
-@media (min-width: 480px) {
+@media (min-width: 640px) and (min-width: 480px) {
   .section.events h2 {
-    font-size: 5em; }
-    .section.events h2 span {
-      font-size: .2em; }
+    font-size: 5em; } }
+
+@media (min-width: 640px) {
+  span {
+    font-size: 1.2em; }
   .section.events header h2 {
     height: 1.583333em; } }
 
 @media (min-width: 640px) {
   .section.events h2 {
     font-size: 7em; }
-    .section.events h2 span {
-      font-size: .1607142em; }
+  span {
+    font-size: 1.1607142em; }
   .section.events header h2 {
     height: 1.5625em; } }
 
@@ -261,11 +273,15 @@ video {
 @media (min-width: 960px) {
   .section.events.content {
     position: relative; }
+  span {
+    font-size: 1.66666667em; }
   .floor1, .floor2 {
     width: 50%;
     padding: 3%;
     margin: 0;
     float: left; }
+    .floor1 p, .floor2 p {
+      margin-bottom: 1.5em; }
   .section.events h2 {
     font-size: 9em; }
     .section.events h2 span {
@@ -276,7 +292,7 @@ video {
     display: block;
     position: absolute;
     right: 25%;
-    bottom: 6.9em;
+    bottom: 3em;
     left: 25%; }
   .eventscontent:after {
     content: 'or';
@@ -288,16 +304,20 @@ video {
     display: block;
     position: absolute;
     right: 0;
-    bottom: .9em;
+    bottom: 0.2em;
     left: 0;
     z-index: 1; } }
 
 .eventscontent {
-  position: relative; }
+  position: relative;
+  padding: 0 0 8%;
+  margin: 0 0 -8%; }
 
 .buttonsEvents {
   text-align: center;
-  position: relative; }
+  position: absolute;
+  width: 40%;
+  bottom: 2em; }
   .buttonsEvents .button {
     background: #000;
     color: #fff;
@@ -308,19 +328,94 @@ video {
       color: #000;
       text-decoration: none; }
 
-/*@media (min-width: 960px) {
-    .buttonsEvents.button{
-        width: 45%;
-        position: absolute;
-        bottom: 0;
-    }
-}*/
-/*   &:before {
-            content: '';
-            border-top: 2px solid #000;
-            display: block;
-            position: absolute;
-            right: 25%;
-            bottom: 2em;
-            left: 25%;
-        }*/
+/*4th section*/
+.tabView .content {
+  width: 90%;
+  padding: 2em 1em;
+  margin: auto;
+  position: relative;
+  margin-bottom: 20em; }
+
+@media (min-width: 960px) {
+  .buttons.tab-list {
+    direction: ltr;
+    width: 49%;
+    vertical-align: top;
+    padding-top: 25%;
+    display: inline-block; } }
+
+.buttons.tab-list {
+  position: relative;
+  z-index: 2;
+  overflow: hidden; }
+  .buttons.tab-list .button {
+    width: 60%;
+    margin: 0 auto 2em;
+    float: none;
+    display: block;
+    border: 2px solid #b3b3b3; }
+    .buttons.tab-list .button:hover {
+      text-decoration: none; }
+    .buttons.tab-list .button:active {
+      color: #f5f5f5;
+      background: #6fcde3;
+      text-decoration: none; }
+
+@media (min-width: 960px) {
+  .currentContent {
+    width: 49%;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+    left: auto; }
+    .currentContent img {
+      width: 120%;
+      margin: -3.5em auto -25% -25%; } }
+
+@media (min-width: 1280px) {
+  .currentContent h2 {
+    font-size: 7em; } }
+
+@media (min-width: 960px) {
+  .currentContent h2 {
+    font-size: 6em; } }
+
+@media (min-width: 480) {
+  .currentContent h2 {
+    font-size: 5em; } }
+
+.currentContent h2 {
+  color: #6fcde3;
+  margin: 1em auto 0; }
+
+/*contant section*/
+@media (min-width: 800px) {
+  .section.contact .content {
+    max-width: 60em; } }
+
+@media (min-width: 640px) {
+  .section.contact header {
+    border-bottom-width: 2px;
+    padding-bottom: 2em;
+    margin-bottom: 3em; }
+    .section.contact header h2 {
+      font-weight: 400; } }
+
+.section.contact .content {
+  margin: auto;
+  padding: 2em 1em; }
+
+.section.contact {
+  background: #cfcfcf; }
+
+.section.contact header {
+  border-bottom: 1px solid #000;
+  padding-bottom: 2em;
+  margin-bottom: 3em; }
+  .section.contact header span {
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    display: block; }

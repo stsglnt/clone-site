@@ -100,36 +100,37 @@
                
                 <div class="form-group">
                   
-                   <div class="col-md-6 " show-errors> 
+                   <div class="col-md-6" show-errors> 
                        <label for="inputName" class="control-label">Name</label>
                        <input name="name" type="text" class="form-control input-lg" id="name" required ng-model="user.name"> 
                         <p class="help-block" ng-if="contactForm.name.$error.required">The name is required</p>
                     </div>
+                
                     
                    <div class="col-md-6" show-errors>
                         <label for="inputLast" class=" control-label">Last Name</label>
                         <input name="lastName" type="text" class="form-control input-lg" id="inputLast" required ng-model="user.lastName">
                         <p class="help-block" ng-if="contactForm.lastName.$error.required">The lastname is required</p>
                     </div>
-                    
-                    <div class="col-md-12" show-errors>
+                                
+   
+                    <div class="col-md-12 " show-errors>
                         <label for="email" class="control-label">Your email</label>
                         <input type="email" class="form-control input-lg" id="email" required ng-model="user.email" name="email">
                         <p class="help-block" ng-if="contactForm.email.$error.required">The email is required</p>
                     </div>
                     
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                         <label for="subject" class="control-label">Subject</label>
                         <input type="text" class="form-control input-lg" id="subject">
                     </div> 
                     
-                    <div class="col-md-12" show-errors>
+                    <div class="col-md-12 " show-errors>
                         <label for="message" class="control-label">Message</label>
                         <textarea class="form-control input-lg" id="message" required ng-model="user.message" name="message"></textarea>
                         <p class="help-block" ng-if="contactForm.message.$error.required">The message is required</p>
                     </div>
-                    
-                </div>
+                </div>      
                 <div>
                     <button class="button submitButton">Contact us</button>
                 </div>

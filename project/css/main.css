@@ -419,3 +419,16 @@ video {
     letter-spacing: .5em;
     text-transform: uppercase;
     display: block; }
+
+/*form-section*/
+#message {
+  resize: vertical; }
+
+.submitButton {
+  background-color: #6fcde3;
+  color: white;
+  border-color: #6fcde3; }
+  .submitButton:hover {
+    background-color: white;
+    color: #6fcde3;
+    border-color: #6fcde3; }

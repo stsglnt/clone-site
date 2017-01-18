@@ -543,3 +543,18 @@ video {
     
 }
 
+/*form-section*/
+#message {
+    resize: vertical;
+}
+.submitButton {
+    background-color: $mainColor;
+    color: white;
+    border-color: $mainColor;
+    &:hover {
+        background-color: white;
+        color: $mainColor;
+        border-color: $mainColor;
+    }
+    
+}

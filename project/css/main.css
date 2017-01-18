@@ -432,3 +432,25 @@ video {
     background-color: white;
     color: #6fcde3;
     border-color: #6fcde3; }
+
+/*validation style*/
+/*form .ng-pristine {
+            border: 1px dotted gray;
+        }
+
+form .ng-invalid.ng-dirty {
+            background-color: lightpink;
+        }
+
+form .ng-valid.ng-dirty {
+            background-color: lightgreen;
+        }
+
+form .ng-invalid-email {
+            color: red;
+}*/
+.help-block {
+  display: none; }
+
+.has-error .help-block {
+  display: block; }

@@ -62,7 +62,7 @@ module.directive('showErrors', function ($timeout, showErrorsConfig) {
     }
   );
   
-  module.provider('showErrorsConfig', function () {
+module.provider('showErrorsConfig', function () {
     var _showSuccess;
     _showSuccess = false;
     this.showSuccess = function (showSuccess) {
@@ -73,7 +73,7 @@ module.directive('showErrors', function ($timeout, showErrorsConfig) {
     };
   });
 
-module.controller('serviceCtrl', function($scope) {
+module.controller('serviceCtrl', function($scope, $http) {
   $scope.save = function() {
     $scope.$broadcast('show-errors-check-validity');
     
@@ -97,7 +97,45 @@ module.controller('serviceCtrl', function($scope) {
     $scope.changeToRolls = function(){
         $scope.url = 'views/rolls.html'
     }
+    
+    
+    /*sending form*/
+    
+    $scope.result = 'hidden';
+    $scope.resultMessage;
+    $scope.formData;
+    $scope.submitted = false;
+    
+    $scope.submit = function(contactForm) {
+        $scope.submitted = true;
+        if (contactForm.$valid) {
+            $http({
+                method : 'POST',
+                url    : 'contact.php',
+                data   : $.param($scope.user),
+                headers: { 'Content-Type' : 'application/x-www-form-urlencoded'}
+            }).success(function(data){
+                console.log(data);
+                if (data.succes){
+                    $scope.resultMessage = data.message;
+                    $scope.result='bg-success';
+                } else {
+                    $scope.resultMessage = data.message;
+                    $scope.result='bg-danger';
+                }
+            });
+            
+        } else {
+            $scope.resultMessage = 'Please fill out all the fields.';
+            $scope.result = 'bg-danger'
+        }
+    }
+    
+    
+    
 });
+
+
 
 
 

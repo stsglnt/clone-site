@@ -454,3 +454,49 @@ form .ng-invalid-email {
 
 .has-error .help-block {
   display: block; }
+
+.hidden {
+  display: none; }
+
+form .help-block {
+  font-size: 1em;
+  font-weight: 600;
+  font-family: Nunito, sans-serif;
+  color: #250248 !important; }
+
+/*Menu modal window*/
+#modalWindow {
+  background-color: rgba(227, 212, 212, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: none;
+  z-index: 2; }
+
+.showing-modal {
+  overflow: hidden; }
+
+.modalContent {
+  background-color: rgba(227, 212, 212, 0.84);
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  overflow: auto;
+  text-align: center; }
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s; }
+  .closeButton:hover, .closeButton:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer; }

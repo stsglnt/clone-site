@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html ng-app="serviceApp">
 <head>
@@ -6,12 +7,13 @@
    
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="imagelightbox.min.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.min.css">
 
-
-  
+   
 </head>
 
 
@@ -46,7 +48,7 @@
                <div class="description">
                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora praesentium ipsa neque laudantium maiores, eligendi impedit dolores officiis necessitatibus maxime tempore quaerat odit debitis! Architecto fuga in odio, provident saepe accusantium reprehenderit assumenda deserunt, maxime necessitatibus sed, sunt sint. Architecto, obcaecati non. Quibusdam nam aut, ipsam. Quisquam quam, nihil iste minima, illum, dicta, velit magnam cumque quibusdam quaerat itaque totam quae iusto voluptate eius debitis eveniet ducimus eligendi perferendis deleniti et. Architecto itaque atque porro, asperiores, harum tenetur minus accusamus?</p>
                </div>
-               <div class="buttons"><a href="#" class="button">Menu</a></div>
+               <div class="buttons"><a href="#" class="button" id="open">Menu</a></div>
             </div>
                
        </section>
@@ -60,18 +62,23 @@
               <div class="floor1">
                  <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate officiis non, eveniet doloribus in? Beatae voluptatum iure na.</p>
                  <div class="buttonsEvents">
-                     <a href="#" class="button">Floor1</a>
+                    <a href="img/0f7dc2ad5aa956f41e49699a5c6540f7.png" class="button" data-lightbox='floor1'>Floor1</a>
+                    <a href="img/31d102d1079bf5d2830a2ae9ea7fb015.png" data-lightbox='floor1'></a>
+                    <a href="img/dishes-californiasunset-014.png" data-lightbox='floor1'></a>
                  </div>
               </div>
               <div class="floor2">
               
                 <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos recusandae voluptatum dolore mollitia enim, dolor odio vitae dolore.</p>
                   <div class="buttonsEvents">
-                     <a href="#" class="button">Floor1</a>
+                     <a href="img/0f7dc2ad5aa956f41e49699a5c6540f7.png" class="button" data-lightbox='floor'>Floor2</a>
+                      <a href="img/31d102d1079bf5d2830a2ae9ea7fb015.png" data-lightbox='floor'></a>
+                      <a href="img/dishes-californiasunset-014.png" data-lightbox='floor'></a>
                  </div>
               </div>
+              
           </div>
-           
+         
        </section>
        <section class="tabView section">
           <div class="content">
@@ -87,7 +94,7 @@
           </div>
            
        </section>
-      
+         
        <section class="contact section">
           <div class="content">
                 <header>
@@ -96,41 +103,42 @@
                  
                </header>
                
-            <form name="contactForm" action="" class="form-horizontal"  >
+            <form name="contactForm" action="" class="form-horizontal"  method="post" ng-submit=submit(contactForm)>
                
                 <div class="form-group">
                   
                    <div class="col-md-6" show-errors> 
                        <label for="inputName" class="control-label">Name</label>
-                       <input name="name" type="text" class="form-control input-lg" id="name" required ng-model="user.name"> 
-                        <p class="help-block" ng-if="contactForm.name.$error.required">The name is required</p>
+                       <input name="inputName" type="text" class="form-control input-lg" id="name" required ng-model="user.name"> 
+                        <p class="help-block" ng-if="contactForm.inputName.$error.required">The name is required</p>
                     </div>
                 
                     
                    <div class="col-md-6" show-errors>
                         <label for="inputLast" class=" control-label">Last Name</label>
-                        <input name="lastName" type="text" class="form-control input-lg" id="inputLast" required ng-model="user.lastName">
-                        <p class="help-block" ng-if="contactForm.lastName.$error.required">The lastname is required</p>
+                        <input name="inputLastName" type="text" class="form-control input-lg" id="inputLast" required ng-model="user.lastName">
+                        <p class="help-block" ng-if="contactForm.inputLastName.$error.required">The lastname is required</p>
                     </div>
                                 
    
                     <div class="col-md-12 " show-errors>
                         <label for="email" class="control-label">Your email</label>
-                        <input type="email" class="form-control input-lg" id="email" required ng-model="user.email" name="email">
-                        <p class="help-block" ng-if="contactForm.email.$error.required">The email is required</p>
+                        <input type="email" class="form-control input-lg" id="email" required ng-model="user.email" name="inputEmail">
+                        <p class="help-block" ng-if="contactForm.inputEmail.$error.required">The email is required</p>
                     </div>
                     
                     <div class="col-md-12 ">
                         <label for="subject" class="control-label">Subject</label>
-                        <input type="text" class="form-control input-lg" id="subject">
+                        <input type="text" name="inputSubject" class="form-control input-lg" id="subject" ng-model="contactForm.subject">
                     </div> 
                     
                     <div class="col-md-12 " show-errors>
                         <label for="message" class="control-label">Message</label>
-                        <textarea class="form-control input-lg" id="message" required ng-model="user.message" name="message"></textarea>
-                        <p class="help-block" ng-if="contactForm.message.$error.required">The message is required</p>
+                        <textarea class="form-control input-lg" id="message" required ng-model="user.message" name="inputMessage"></textarea>
+                        <p class="help-block" ng-if="contactForm.inputMessage.$error.required">The message is required</p>
                     </div>
-                </div>      
+                </div>  
+                <!--<p ng-class="result">{{resultMessage}}</p>   --> 
                 <div>
                     <button class="button submitButton">Contact us</button>
                 </div>
@@ -165,36 +173,59 @@
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+       
+       <div id="modalWindow">
+       <div class='closeButton'>X</div>
+        <div class="modalContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>   
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque.</p>
+           </div>
+       </div>
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ <script src="../node_modules/lightbox2/dist/js/lightbox.min.js"></script>
  <script src="scripts/app.js"></script>
+ <script src="scripts/modal.js"></script>
 </body>
 </html>

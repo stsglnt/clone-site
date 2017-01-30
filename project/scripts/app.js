@@ -89,14 +89,21 @@ module.controller('serviceCtrl', function($scope, $http) {
   }
 
     
-    $scope.url = 'views/bar.html';
-    
-    $scope.changeToBar = function(){
-        $scope.url = 'views/bar.html';
-    }
+/*    $scope.url = 'views/bar.html';
+    var barService = angular.element(document.querySelector('.barService'));
+    var sushiRolls = angular.element(document.querySelector('.sushiRolls'));
     $scope.changeToRolls = function(){
         $scope.url = 'views/rolls.html'
+        barService.css('opacity', 0);
+        sushiRolls.css('opacity', 1);
     }
+    $scope.changeToBar = function(){
+       
+        barService.css('opacity', 1);
+        sushiRolls.css('opacity', 0);
+        $scope.url = 'views/bar.html';
+    }*/
+
     
     
     /*sending form*/

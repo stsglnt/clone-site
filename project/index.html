@@ -59,22 +59,24 @@
                       <span>Big or small</span>
                   </h2>
               </header>
-              <div class="floor1">
-                 <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate officiis non, eveniet doloribus in? Beatae voluptatum iure na.</p>
-                 <div class="buttonsEvents">
-                    <a href="img/0f7dc2ad5aa956f41e49699a5c6540f7.png" class="button" data-lightbox='floor1'>Floor1</a>
-                    <a href="img/31d102d1079bf5d2830a2ae9ea7fb015.png" data-lightbox='floor1'></a>
-                    <a href="img/dishes-californiasunset-014.png" data-lightbox='floor1'></a>
-                 </div>
-              </div>
-              <div class="floor2">
-              
-                <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos recusandae voluptatum dolore mollitia enim, dolor odio vitae dolore.</p>
-                  <div class="buttonsEvents">
-                     <a href="img/0f7dc2ad5aa956f41e49699a5c6540f7.png" class="button" data-lightbox='floor'>Floor2</a>
-                      <a href="img/31d102d1079bf5d2830a2ae9ea7fb015.png" data-lightbox='floor'></a>
-                      <a href="img/dishes-californiasunset-014.png" data-lightbox='floor'></a>
-                 </div>
+             <div class="restFloors">
+                   <div class="floor1">
+                     <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate officiis non, eveniet doloribus in? Beatae voluptatum iure na.</p>
+                     <div class="buttonsEvents">
+                        <a href="img/0f7dc2ad5aa956f41e49699a5c6540f7.png" class="button" data-lightbox='floor1'>Floor1</a>
+                        <a href="img/31d102d1079bf5d2830a2ae9ea7fb015.png" data-lightbox='floor1'></a>
+                        <a href="img/dishes-californiasunset-014.png" data-lightbox='floor1'></a>
+                     </div>
+                  </div>
+                  <div class="floor2">
+                  
+                    <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos recusandae voluptatum dolore mollitia enim, dolor odio vitae dolore.</p>
+                      <div class="buttonsEvents">
+                         <a href="img/0f7dc2ad5aa956f41e49699a5c6540f7.png" class="button" data-lightbox='floor'>Floor2</a>
+                          <a href="img/31d102d1079bf5d2830a2ae9ea7fb015.png" data-lightbox='floor'></a>
+                          <a href="img/dishes-californiasunset-014.png" data-lightbox='floor'></a>
+                     </div>
+                  </div>
               </div>
               
           </div>
@@ -82,15 +84,25 @@
        </section>
        <section class="tabView section">
           <div class="content">
+            <div class="currentContent">
+            <!--    <ng-include src="url"></ng-include>-->
+               <div class="barService tabViews">
+                   <img src="img/31d102d1079bf5d2830a2ae9ea7fb015.png" alt="couldn't download picture">
+                    <h2>Bar service</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, soluta, obcaecati. Suscipit reiciendis eaque facere culpa, eveniet sunt, fugiat quis quidem dignissimos temporibus voluptates officia optio, ipsum distinctio animi quaerat veniam itaque iste maiores doloribus. Earum aliquam, at dignissimos nam numquam aut, aperiam cumque suscipit beatae! Aliquid ullam architecto repellat iure eaque </p>
+               </div>
+               <div class="sushiRolls tabViews">
+                   <img src="img/dishes-californiasunset-014.png" alt="">
+                    <h2>Sushi rolls</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus praesentium ipsa voluptatibus excepturi, modi fugit error voluptates, voluptas atque nobis perspiciatis! Accusamus enim soluta debitis, nisi at obcaecati magnam perspiciatis! Unde maiores eveniet dicta! Fuga blanditiis maxime repellendus! Dolore unde incidunt dicta corrupti rem nam officiis maiores modi, aliquam eligendi eveniet, mollitia architecto praes!</p>
+                               </div>
+               </div>
             <div class="buttons tab-list">
-              <a href="" class="button" ng-click="changeToBar()">Bar service</a>
-              <a href="" class="button" ng-click="changeToRolls()">Rolls</a>
+              <a href="" class="button" id="changeToBar" >Bar service</a>
+              <a href="" class="button" id="changeToRolls">Rolls</a>
             </div>
             
-            <div class="currentContent">
-                <ng-include src="url"></ng-include>
-               
-            </div>
+           
           </div>
            
        </section>
@@ -147,6 +159,14 @@
        </section>
     </div>
     <footer>
+        <div class="content" itemscope itemtype="http://schema.org/Organization">
+            <p itemprop="name">Here goes brief description of organization</p>
+            <ul class="contacts">
+                <li itemprop="telephone">000 00 00 000</li>
+                <li itemprop="email">exampla@example.exm</li>
+            </ul>
+        </div>
+    
     </footer>
     
       
@@ -227,5 +247,6 @@
  <script src="../node_modules/lightbox2/dist/js/lightbox.min.js"></script>
  <script src="scripts/app.js"></script>
  <script src="scripts/modal.js"></script>
+ <script src="scripts/styleJquery.js"></script>
 </body>
 </html>
